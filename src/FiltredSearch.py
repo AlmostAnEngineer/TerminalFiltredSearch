@@ -22,4 +22,7 @@ if __name__ == '__main__':
     results = googleSearchFiltred(query, numberOfResults)
     print("Search results:")
     for searchResult, result in enumerate(results):
-        print(f"{searchResult+1}. {result}")
+        if searchResult+1 <= numberOfResults:
+            print(f"{searchResult+1}. {result}")
+        else:
+            break
